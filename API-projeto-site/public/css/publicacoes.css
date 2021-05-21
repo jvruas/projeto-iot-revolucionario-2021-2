@@ -109,8 +109,8 @@ a {
     margin-bottom: 40px;
 }
 
-.dashboard .input-padrao {
-    width: 50%;
+.dashboard .textarea-padrao {
+    resize: none;
     display: inline-block;
 }
 
@@ -126,7 +126,15 @@ a {
 .dashboard .btn-green {
     display: block;
     float: none;
-    margin: auto;
+    margin: 20px auto;
+
+    color: white;
+    background-color: green;
+    border: 0;
+    padding: 10px 20px;
+
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .botoes {
@@ -195,6 +203,7 @@ a {
 }
 
 .publicacao {
+    background-color: white;
     margin: 0 auto;
     width: 50%;
     display: block;
