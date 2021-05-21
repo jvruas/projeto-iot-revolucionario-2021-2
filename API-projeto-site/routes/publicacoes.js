@@ -4,17 +4,16 @@ var sequelize = require('../models').sequelize;
 var Publicacao = require('../models').Publicacao;
 
 /* ROTA QUE RECUPERA CRIA UMA PUBLICAÇÃO */
-router.post('/publicar/:idUsuario',function(req, res, next) {
+router.post('/publicar/:idUsuario', function(req, res, next) {
     console.log("Iniciando Publicação...")
     
 	let idUsuario = req.params.idUsuario;
 
     Publicacao.create({
-        titulo: req.body.titulo,
         descricao: req.body.descricao,
         fkUsuario: idUsuario
     }).then(resultado => {
-        console.log("USUÁRIO CADASTRADO COM SUCESSO!");
+        console.log("Post realizado com sucesso!!");
         res.send(resultado);
     }).catch(erro => {
         console.log('DEU UM ERRINHO')
